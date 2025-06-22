@@ -34,7 +34,7 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body class="bg-dark-blue font-overpass text-[15px] grid place-items-center h-screen m-0 p-0 box-border">
-    <main class="bg-card-bg w-[400px] h-[400px] rounded-[20px] p-[25px] mx-auto" role="main" aria-labelledby="main-heading">
+    <main class="bg-card-bg w-[400px] h-[400px] rounded-[20px] p-[25px] mx-auto" role="main" aria-labelledby="rating-heading">
       <!-- Rating state start -->
       <section id="rating" class="flex flex-col gap-[25px]" role="region" aria-labelledby="rating-heading">
         <header class="flex flex-col gap-[25px]">
@@ -51,22 +51,27 @@
 
         <nav class="flex justify-center items-center gap-[20px]" role="navigation" aria-label="Rating options">
           <button class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-card-bg border-none" 
+                  type="button"
                   data-rating="1" 
                   aria-label="Rate 1 out of 5"
                   aria-pressed="false">1</button>
           <button class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-card-bg border-none" 
+                  type="button"
                   data-rating="2" 
                   aria-label="Rate 2 out of 5"
                   aria-pressed="false">2</button>
           <button class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-card-bg border-none" 
+                  type="button"
                   data-rating="3" 
                   aria-label="Rate 3 out of 5"
                   aria-pressed="false">3</button>
           <button class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-card-bg border-none" 
+                  type="button"
                   data-rating="4" 
                   aria-label="Rate 4 out of 5"
                   aria-pressed="false">4</button>
           <button class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange focus:ring-offset-2 focus:ring-offset-card-bg border-none" 
+                  type="button"
                   data-rating="5" 
                   aria-label="Rate 5 out of 5"
                   aria-pressed="false">5</button>
@@ -74,7 +79,7 @@
 
         <button id="submit-btn" 
                 class="h-[45px] w-[350px] rounded-[20px] bg-orange text-white border-none uppercase hover:bg-white hover:text-orange cursor-pointer transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-card-bg" 
-                type="button"
+                type="submit"
                 aria-describedby="submit-description">Submit</button>
         <div id="submit-description" class="sr-only">Submit your rating. You must select a rating before submitting.</div>
       </section>
@@ -107,7 +112,17 @@
       <!-- Thank you state end -->
     </main>
 
-    
+    <footer class="text-[11px] text-center mt-4" role="contentinfo">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="text-[hsl(228,45%,44%)] hover:underline focus:outline-none focus:ring-2 focus:ring-[hsl(228,45%,44%)] focus:ring-offset-1">Frontend Mentor</a>.
+        Coded by <a href="#" 
+                    class="text-[hsl(228,45%,44%)] hover:underline focus:outline-none focus:ring-2 focus:ring-[hsl(228,45%,44%)] focus:ring-offset-1">Ace</a>.
+      </p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
