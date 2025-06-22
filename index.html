@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'overpass': ['Overpass', 'sans-serif'],
+            },
+            colors: {
+              'dark-blue': 'hsl(216, 12%, 8%)',
+              'card-bg': 'hsl(213, 19%, 18%)',
+              'medium-grey': 'hsl(217, 12%, 63%)',
+              'light-grey': 'hsla(216, 12%, 54%, 0.2)',
+              'star-bg': 'hsla(216, 12%, 54%, 0.15)',
+              'orange': 'hsl(25, 97%, 53%)',
+            }
+          }
+        }
+      }
+    </script>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body class="bg-dark-blue font-overpass text-[15px] grid place-items-center h-screen m-0 p-0 box-border">
+    <div class="bg-card-bg w-[400px] h-[400px] rounded-[20px] p-[25px] mx-auto">
+      <!-- Rating state start -->
+
+      <div id="rating" class="flex flex-col gap-[25px]">
+        <div class="bg-star-bg rounded-full w-[50px] h-[50px] grid place-items-center">
+          <img src="./images/icon-star.svg" alt="star-icon" />
+        </div>
+
+        <h1 class="text-white">How did we do?</h1>
+        <p class="text-medium-grey">
+          Please let us know how we did with your support request. All feedback is appreciated to
+          help us improve our offering!
+        </p>
+
+        <nav class="flex justify-center items-center gap-[20px]">
+          <div class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200" data-rating="1">1</div>
+          <div class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200" data-rating="2">2</div>
+          <div class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200" data-rating="3">3</div>
+          <div class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200" data-rating="4">4</div>
+          <div class="rates w-[50px] h-[50px] bg-light-grey rounded-full grid place-items-center text-medium-grey hover:bg-sky-400 hover:text-white cursor-pointer transition-colors duration-200" data-rating="5">5</div>
+        </nav>
+
+        <button id="submit-btn" class="h-[45px] w-[350px] rounded-[20px] bg-orange text-white border-none uppercase hover:bg-white hover:text-orange cursor-pointer transition-colors duration-200" type="button">Submit</button>
+      </div>
+
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+
+      <div id="thank-you" class="hidden flex flex-col gap-[25px] items-center text-center py-[15px] px-[5px]">
+        <img src="./images/illustration-thank-you.svg" alt="illustration-thank-you" />
+        <div id="rated-text" class="bg-light-grey h-[30px] w-[200px] rounded-[15px] text-orange grid place-items-center">You selected .... out of 5</div>
+        <h1 class="text-white">Thank you!</h1>
+        <p class="text-medium-grey">
+          We appreciate you taking the time to give a rating. If you ever need more support, don't
+          hesitate to get in touch!
+        </p>
+      </div>
+
+      <!-- Thank you state end -->
+    </div>
+    <div class="text-[11px] text-center">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-[hsl(228,45%,44%)]">Frontend Mentor</a>.
+      Coded by <a href="#" class="text-[hsl(228,45%,44%)]">Ace</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html> 
