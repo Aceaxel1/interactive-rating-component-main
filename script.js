@@ -1,13 +1,5 @@
 let selectedRating = 0;
 
-// Handle keyboard navigation for rating buttons
-function handleKeyDown(event, element) {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    selectRating(element);
-  }
-}
-
 // Function to select a rating
 function selectRating(element) {
   // Remove active class from all rates
@@ -76,14 +68,6 @@ document.getElementById('submit-btn').addEventListener('click', function() {
   }
 });
 
-// Add keyboard event listener for the submit button
-document.getElementById('submit-btn').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    this.click();
-  }
-});
-
 // Initialize accessibility attributes
 document.addEventListener('DOMContentLoaded', function() {
   // Set initial aria-pressed states
@@ -92,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // Add focus management
-  const ratingSection = document.getElementById('rating');
   const thankYouSection = document.getElementById('thank-you');
   
   // When thank you section becomes visible, focus the heading
